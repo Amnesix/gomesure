@@ -17,15 +17,15 @@ func (t *Mesure) Starttime() {
 
 // Elapsedtime permet d'arrêter la mesure
 func (t *Mesure) Elapsedtime() {
-	t.Mesure = float64(time.Now().UnixNano()-t.start) / 1000000.
+	t.mesure = float64(time.Now().UnixNano()-t.start) / 1000000.
 }
 
 // GetMillisecondes permet de récupérer le résultat en mili seconde.
 func (t *Mesure) GetMillisecondes() float64 {
-	return mesure
+	return t.mesure
 }
 
 // GetSecondes permet de récupérer le résultat en mili seconde.
 func (t *Mesure) GetSecondes() float64 {
-	return mesure / 1000.
+	return t.mesure / 1000.
 }
